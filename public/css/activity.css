@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.activity-container {
+    padding: .5rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    background: #f6f8fc;
+    margin-top: -18px;
+    min-height: 80vh;
+    box-sizing: border-box;
+}
+.activity--divider {
+    height: 2px;
+    background-color: #ccc;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.activity-table {
+    margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.activity-table th, .activity-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.activity-status-active {
+    color: green;
+    font-weight: 600;
+}
+
+.activity-status-suspended {
+    color: red;
+    font-weight: 600;
+}
+
+.activity-action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+.activity-search-filtering {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.activity-search-bar{
+    border: 1px solid #1e4b8c;
+    color: #1e4b8c;
+    font-size: 12px;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    width: 15%;
+}
+.space{
+    margin-right: 12px;
+}
+.activity-filter-select {
+    border: 1px solid #1e4b8c;
+    color: #1e4b8c;
+    font-size: 12px;
+    padding: 0.5rem 2rem;
+    padding-right: 3rem; 
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    appearance: none;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231e4b8c"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 1rem center;
+    background-size: 1rem;
+    background-color: #fff;
+}
+.activity-menu-btn i {
+    transform: rotate(90deg);
+    font-size: 14px;
+    color: #797A7C;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+}
+
+.activity-menu-btn:hover i {
+    color: #1e4b8c;
+}
+.pagination-info {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #333;
+}
+
+.pagination-info .pagination-prev,
+.pagination-info .pagination-next {
+    cursor: pointer;
+    color: #1e4b8c;
+    margin: 0 5px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.pagination-info .pagination-prev:hover,
+.pagination-info .pagination-next:hover {
+    color: #163a6c;
+}
+
+.pagination-info span {
+    font-weight: 500;
+}

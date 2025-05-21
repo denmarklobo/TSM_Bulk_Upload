@@ -1,0 +1,93 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    margin: 0;
+}
+
+.container {
+    padding: 1rem 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    height: auto;
+    width: 20%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    color: #797A7C;
+}
+
+.user-name {
+    margin-left: 10px;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.logout{
+    cursor: pointer;
+    color: red;
+}
+
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+.divider {
+    height: 2px;
+    background-color: #ccc;
+    border: none;
+}
+
+.sub-header {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sub-header p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    margin: 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #797A7C;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.sub-header p i {
+    font-size: 16px;
+    color: inherit;
+}
+
+.sub-header p.active {
+    color: #1e4b8c;
+    font-weight: 600;
+    border-bottom: 3px solid #1e4b8c;
+    animation: tab-activate 0.3s ease;
+}
+@keyframes tab-activate {
+    from {
+        border-bottom: 2px solid transparent;
+        color: #797A7C;
+    }
+    to {
+        border-bottom: 2px solid #1e4b8c;
+        color: #000;
+    }
+}
