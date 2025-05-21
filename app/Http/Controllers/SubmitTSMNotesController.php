@@ -185,7 +185,11 @@ class SubmitTSMNotesController extends Controller
 
     public function getToken()
     {
-
+        $tenant = '68981705-98d9-44f3-a72b-61c7cd3ef4fd';
+        $tokenUrl = 'https://login.microsoftonline.com/' . $tenant . '/oauth2/v2.0/token';
+        $clientId = 'fa2fb323-21d0-4967-abe7-585013608b13';
+        $clientSecret = 'h2b8Q~ztG8BG0EPZxTbJd7L_5VkM65ItwgfFodsD';
+        $scope = 'https://graph.microsoft.com/.default';
     
         $postData = [
             'grant_type' => 'client_credentials',
