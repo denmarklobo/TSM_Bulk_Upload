@@ -111,7 +111,7 @@ document.getElementById('tsmForm').addEventListener('submit', function (e) {
     formData.append('name', name);
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://127.0.0.1:8000/submit-tsm-notes', true);
+    xhr.open('POST', 'https://connect.dunbraegroup.com/submit-tsm-notes', true);
     xhr.setRequestHeader('Authorization', `Bearer ${token}`);
 
     // Show the progress text when the Submit button is clicked
@@ -233,7 +233,7 @@ document.getElementById('tsmForm').addEventListener('submit', function (e) {
         confirmButtonText: 'Yes, logout'
     }).then((result) => {
         if (result.isConfirmed) {
-            fetch('http://127.0.0.1:8000/api/userlogout', {
+            fetch('https://connect.dunbraegroup.com/api/userlogout', {
                 method: 'POST',
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('auth_token'),

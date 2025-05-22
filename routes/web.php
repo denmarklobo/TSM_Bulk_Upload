@@ -8,12 +8,15 @@ use App\Http\Controllers\ActivityLogController;
 
 
 Route::get('/', function () { return view('login'); })->name('login');
+<<<<<<< HEAD
+=======
+Route::get('/login', function () { return view('login'); })->name('login');
+>>>>>>> a1e3dff13755b2031b5320f8566211cb50a0c0d2
 Route::get('/adminlogin', function () { return view('adminlogin'); })->name('adminlogin');
 Route::get('/upload', function () { return view('upload'); })->name('upload');
 Route::get('/admin', function () {return view('admin'); })->name('admin');
 Route::get('/accounts', function () {return view('accounts'); })->name('accounts');
 Route::get('/activity', function () {return view('activity'); })->name('activity');
-
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);

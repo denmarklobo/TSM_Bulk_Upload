@@ -374,8 +374,8 @@ window.updateManageAccountTable = updateManageAccountTable;
     }
 
     // Fetch Users and Populate Manage Account Table
-    const API_URL = 'http://127.0.0.1:8000/api/users';
-const SUSPEND_URL = 'http://127.0.0.1:8000/api/user'; // base for /{id}/suspend or /{id}/enable
+    const API_URL = 'https://connect.dunbraegroup.com/api/users';
+const SUSPEND_URL = 'https://connect.dunbraegroup.com/api/user'; // base for /{id}/suspend or /{id}/enable
 const tableBody = document.getElementById('manage-account-table-body');
 
 function loadUsers() {
@@ -615,7 +615,7 @@ loadUsers();
                 const userId = option.getAttribute('data-user-id');
                 const action = option.classList.contains('suspend-user') ? 'suspend' : 'enable';
                 
-                fetch(`http://127.0.0.1:8000/api/user/${userId}/${action}`, {
+                fetch(`https://connect.dunbraegroup.com/api/user/${userId}/${action}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -716,7 +716,7 @@ function filterActivityLogsData() {
 
     async function fetchActivityLogs() {
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/activities'); // Updated endpoint
+            const response = await fetch('https://connect.dunbraegroup.com/api/activities'); // Updated endpoint
             if (!response.ok) {
                 throw new Error('Failed to fetch activity logs');
             }
@@ -844,7 +844,7 @@ function filterActivityLogsData() {
         }).then((result) => {
             if (result.isConfirmed) {
                 // Send data to backend
-                fetch('http://127.0.0.1:8000/register', {
+                fetch('https://connect.dunbraegroup.com/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
