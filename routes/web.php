@@ -7,7 +7,7 @@ use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\ActivityLogController;
 
 
-Route::get('/login', function () { return view('login'); })->name('login');
+Route::get('/', function () { return view('login'); })->name('login');
 Route::get('/adminlogin', function () { return view('adminlogin'); })->name('adminlogin');
 Route::get('/upload', function () { return view('upload'); })->name('upload');
 Route::get('/admin', function () {return view('admin'); })->name('admin');
